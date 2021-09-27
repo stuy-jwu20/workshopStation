@@ -1,11 +1,11 @@
 #Jonathan Wu
 #SoftDev
-#K03 -- printingNames/Python/The goal was to print a SoftDev student name from period1 and period2 written in Python.
+#K01 -- printingNames/Python/The goal was to print a SoftDev student name from period1 and period2 written in Python.
 #2021-09-22
 
 import random
 #Lists of period 1 and 2
-pd1 = ['Owen Yaggy', 'Haotain Gan', 'Ishraq Mahid', 'Kevin Cao', 'Ivan Lam',
+pd1 = ['Owen Yaggy', 'Haotain Gan', 'Ishraq Mahid', 'Julia Nelson', 'Ivan Lam',
        'Michelle Lo', 'Christopher Liu', 'Michael Borzuk', 'Ivan Mijacika',
        'Lucas Lee', 'Rayat Roy', 'Emma Buller', 'Andrew Juang',
        'Renggeng Zheng', 'Angela Zhang', 'Alejandro Alonso', 'Deven Mahehwari',
@@ -18,7 +18,7 @@ pd2 = ['Patrick Ging', 'Raymond Yeung', 'Josephine Lee', 'Alif Abdullah',
        'Austin Ngan', 'Thomas Yu', 'Yaying Liang Li', 'Jesse Xie', 'Eric Guo',
        'Jonathan Wu', 'Zhaoyu Lin', 'Joshua Kloepfer', 'Noakai Aronesty',
        'Yoonah Chang', 'David', 'Wen Hao Dong', 'Mark Zhu', 'Qina Liu',
-       'Julia Nelson', 'Sophie Liu', 'Annabel Zhang', 'Roshani Shrestha', 'Han Zhang']
+       'Kevin Cao', 'Sophie Liu', 'Annabel Zhang', 'Roshani Shrestha', 'Han Zhang']
 
 #Random function to pick a random person in the class
 a = random.randint(0,32)
