@@ -17,7 +17,7 @@ pd2 = ['Patrick Ging', 'Raymond Yeung', 'Josephine Lee', 'Alif Abdullah',
        'Shadman Rakib', 'Liesel Wong', 'Daniel Sooknanan', 'Cameron Nelson',
        'Austin Ngan', 'Thomas Yu', 'Yaying Liang Li', 'Jesse Xie', 'Eric Guo',
        'Jonathan Wu', 'Zhaoyu Lin', 'Joshua Kloepfer', 'Noakai Aronesty',
-       'Yoonah Chang', 'David', 'Wen Hao Dong', 'Mark Zhu', 'Qina Liu',
+       'Yoonah Chang', 'David Chong', 'Wen Hao Dong', 'Mark Zhu', 'Qina Liu',
        'Kevin Cao', 'Sophie Liu', 'Annabel Zhang', 'Roshani Shrestha', 'Han Zhang']
 
 #Random function to pick a random person in the class
