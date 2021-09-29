@@ -1,9 +1,9 @@
-Jonathan Wu (Untitled - Jonathan W., Liesel W.)
-SoftDev
-K06 -- Explaining ReadingCSV.py code
-2021-09-29
+Jnathan Wu (Untitled - Jonathan W., Liesel W.)  
+SoftDev  
+K06 -- Explaining ReadingCSV.py code  
+2021-09-29  
 
-File (CSV) I/0: 
+File (CSV) I/0:  
   The program takes a .csv file from GitHub by downloading it from using a RAW url link. Then the program decodes it from 'UTF-8' 
   (which is a standard encoding (Encoding standards tell the web browser  how to interpret the text characters in your HTML or the body of the email) for the 
   internet). The decoded text is then turned from stored text in memory and into a data structure for the program to use.
