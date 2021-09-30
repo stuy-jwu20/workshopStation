@@ -9,6 +9,6 @@ python3 - specifies the console to use python3 rather than an older version or s
 
 -m - calls the program to acces main
 
-venv - stands for virtual environment and is used to install Python packages for different projects without installing the packages globally. The installation of python packages globallly. The installation of python packages is isolated so they possibly don't conflict with other packages in other projects.
+venv - stands for virtual environment and is used to install Python packages for different projects without installing the packages globally. The installation of python packages globally. The installation of python packages is isolated so they possibly don't conflict with other packages in other projects.
 
 ~myherozero - "~/" specifies the home directory of your project "myherozero"
