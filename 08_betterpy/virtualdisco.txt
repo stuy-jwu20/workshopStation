@@ -1,6 +1,6 @@
 Intel Sucks (Andrew J., Jonathan W., Andy L.)
 SoftDev
-K08 --Cross Pollination and Virtual Insanity
+K08 --Cross Pollination and Virtual Insanity/Virtual Environemnts/Talked about what python3 -m venv ~/myherozero did.
 2021-09-30  
 
 Investigating $ python3 -m venv ~/myherozero
