@@ -7,8 +7,11 @@ Investigating $ python3 -m venv ~/myherozero
 
 python3 - specifies the console to use python3 rather than an older version or something simiiar.
 
--m - calls the program to acces main
+-m - calls the terminal to let it know that it should run a module of some sort.
 
-venv - stands for virtual environment and is used to install Python packages for different projects without installing the packages globally. The installation of python packages globallly. The installation of python packages is isolated so they possibly don't conflict with other packages in other projects.
+venv - stands for virtual environment and is used to install Python packages for different projects without installing the packages globally. The installation of python packages globally. The installation of python packages is isolated so they possibly don't conflict with other packages in other projects.
 
 ~myherozero - "~/" specifies the home directory of your project "myherozero"
+
+Source: https://docs.python.org/3/library/venv.html
+https://appdividend.com/2021/02/18/what-is-the-meaning-of-python-m-flag/

@@ -1,6 +1,6 @@
 # Jonathan Wu
 # SoftDev
-# K05 - combining code between trios to make a better student RNG selector
+# K05 - combining code between trios to make a better student RNG selector/Mashing together Python code/We worked in trios to mash together our code from K01 and to refractor it.
 # 2021-09-27
 
 # Summary of trio discussion
