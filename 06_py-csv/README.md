@@ -1,6 +1,6 @@
 <h3>Jonathan Wu (Untitled - Jonathan W., Liesel W.)  </h3>
 <h3>SoftDev  </h3>
-<h3>K06 -- Explaining K06 python code  </h3>
+<h3>K06 -- Explaining K06 python code/Documentation/We explained what our code did in the reading csv python homework.  </h3>
 <h3>2021-09-29  </h3>
 
 ---
