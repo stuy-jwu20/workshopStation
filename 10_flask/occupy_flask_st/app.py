@@ -3,11 +3,15 @@
 #K10 -- Putting Little Pieces Together/Flask and Python/Putting all the knowledge from the previous classwork and homework into one app.
 #2021-10--04
 
+from flask import Flask
 import pandas as pd
 import random
 import requests
 import io
 
+app = Flask(__name__)
+
+@app.route("/")
 def jobHunting():
     url = "https://raw.githubusercontent.com/stuy-softdev/notes-and-code/main/smpl/k06/occupations.csv?token=ARNHYM3SD5ALBEMZCWSKJQLBLS7EQ"
     download = requests.get(url).content
@@ -24,6 +28,6 @@ def jobHunting():
                 jobIndex += 1
             weighted.append(percentSum)
     keyList = list(dataDict)
-    print(keyList[jobIndex])
+    return(keyList[jobIndex])
 
-jobHunting()
+app.run()
