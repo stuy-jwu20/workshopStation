@@ -28,6 +28,10 @@ def jobHunting():
                 jobIndex += 1
             weighted.append(percentSum)
     keyList = list(dataDict)
-    return "Team Untitled - Jonathan W. , Liesel W. , Loki , King Hagrid <br/>" + (keyList[jobIndex])
-    
+    occupationList = "";
+    for name in keyList:
+        occupationList += name + "<br/>"
+    stringText = "<h2>Team Untitled - Jonathan W. , Liesel W. , Loki , King Hagrid</h2>" + "<h2>Chosen Occupation: " + (keyList[jobIndex]) + "</h2> <h3>List of Occupations: </h3>" + occupationList
+    return stringText
+
 app.run()
