@@ -28,6 +28,6 @@ def jobHunting():
                 jobIndex += 1
             weighted.append(percentSum)
     keyList = list(dataDict)
-    return(keyList[jobIndex])
-
+    return "Team Untitled - Jonathan W. , Liesel W. , Loki , King Hagrid <br/>" + (keyList[jobIndex])
+    
 app.run()
