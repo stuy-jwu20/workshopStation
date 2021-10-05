@@ -1,6 +1,6 @@
 #Jonathan Wu (Untitled - Jonathan W., Liesel W.)
 #SoftDev
-#K06 -- Reading and sampling from a CSV file
+#K06 -- Reading and sampling from a CSV file/Python/We took a CSV file from Github, processed it through Python and printed out a job weighted based on the percentages.
 #2021-09-28
 
 # Findings:
