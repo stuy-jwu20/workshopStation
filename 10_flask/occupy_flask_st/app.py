@@ -15,13 +15,13 @@ def jobHunting():
     with open('occupations.csv', mode='r') as inp:
         reader = csv.reader(inp)
         next(reader)
-        dataDict = {rows[0]:rows[1] for rows in reader}
+        dataDict = {rows[0]:float(rows[1]) for rows in reader}
     dataDict.pop('Total')
     weighted = []
     percentSum, jobIndex = 0, 0
     jobRandom = random.randint(0,998)
     for num in dataDict.values():
-        percentSum += float(num)*10
+        percentSum += num*10
         if jobRandom >= percentSum:
             jobIndex += 1
         weighted.append(percentSum)
