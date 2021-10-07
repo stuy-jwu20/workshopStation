@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2021
+#Team Untitled - Jonathan W. , Liesel W. , Loki , King Hagrid
+#SoftDev
+#K12 -- or The Only Constant is Change/jinja and Flask/We observed the behaviors of flask and jinja together and noted anything if there was.
+#2021-10--07
 
 from flask import Flask, render_template #Q0: What happens if you remove render_template from this line?
 app = Flask(__name__)
