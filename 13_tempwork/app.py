@@ -1,4 +1,7 @@
-
+#Team Duck on a Rock - Jonathan W. [Loki] ,Patrick G. [Chris], Ryan W. [Jack] | Period 2
+#SoftDev
+#K13 - Template for Success/Jinja templates and flask/We worked in new trios to create a template to display jobs and percentages on the website as well as displaying the randomly selected job.
+#2021-10-09
 
 from flask import Flask, render_template
 import csv
@@ -32,21 +35,16 @@ def occupy():
             for percent in job_and_prob.keys():
                 if(percent >= randNum):
 
-                    ''' 
+                    '''
                     So you can convert a csv_reader into a list of lists
-
                     we just need to use the to list command
-
-                    list()
-
-                    
-                    so this
+                    list() so this
                     list(csv.reader(open("occupations.csv", "r"), delimiter=","))[1:-1]
                     is us reading in the file again and converting it's content to a list of lists and this works fine because it's just
-                    two items per row 
+                    two items per row
                     '''
                     return render_template("template.html", jobAndPercentage=list(csv.reader(open("occupations.csv", "r"), delimiter=","))[1:-1], chosen_job=job_and_prob[percent])
-                    
+
                     #if it's below the value that means it's in between it and the value before it -
                     #elsewise we know it's above the value so we don't actually need another logic operator
 
@@ -58,9 +56,7 @@ def occupy():
             >>> d.items()
             [('a', 1), ('c', 3), ('b', 2)]
             '''
-
-
-
+            
 if __name__ == "__main__":
     app.debug = True
     app.run()
