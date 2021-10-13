@@ -16,48 +16,35 @@ def index():
 
 @app.route("/occupyflaskst")
 def occupy():
-    job_and_prob = {}
+    # will contain the all the key-value pairs (occupation-probability pairs) 
+    data_dict = {}
 
     with open("data/occupations.csv", "r") as f:
+            reader = csv.DictReader(f)
 
-            csv_reader = csv.reader(f, delimiter=",")
-            next(csv_reader)
-            sum = 0.0
+            # reads through each line and fills up data_dict with the key-value pairs
+            for line in reader:
+                data_dict[line["Job Class"]] = float(line["Percentage"])
 
+            # removes the "Total" entry, which is useless
+            del data_dict["Total"] 
+            
+            jobs = list(data_dict.keys())
+            probs = list(data_dict.values())
 
-            for value in csv_reader:
-                            if(value[0] == "Total"):
-                                    continue
-                            sum = sum + (10 * float(value[1])) #adding the values
-                            job_and_prob[sum] = value[0]
+            # randomList is a "list" of one choice (because k=1) among the jobs with weight probs
+            # chosen_job is simply the  first (and only value) of randomList
+            randomList = random.choices(jobs, weights=probs, k=1)
+            chosen_job = randomList[0]
+            print(chosen_job)
 
-            randNum = random.randrange(998) #random number
-            for percent in job_and_prob.keys():
-                if(percent >= randNum):
-
-                    ''' 
-                    So you can convert a csv_reader into a list of lists
-                    we just need to use the to list command
-                    list()
-                    
-                    so this
-                    list(csv.reader(open("occupations.csv", "r"), delimiter=","))[1:-1]
-                    is us reading in the file again and converting it's content to a list of lists and this works fine because it's just
-                    two items per row 
-                    '''
-                    return render_template("tablified.html", jobAndPercentage=list(csv.reader(open("data/occupations.csv", "r"), delimiter=","))[1:-1], chosen_job=job_and_prob[percent])
-                    
-                    #if it's below the value that means it's in between it and the value before it -
-                    #elsewise we know it's above the value so we don't actually need another logic operator
-
-            '''
-            There is a dictionary command that turns the dictionary into a list of tuples
-            dict.items()
-            >>> d = { 'a': 1, 'b': 2, 'c': 3 }
-            >>> d.items()
-            [('a', 1), ('c', 3), ('b', 2)]
-            '''
-
+            return render_template(
+                "tablified.html", 
+                data_dict=data_dict,
+                jobs=jobs, 
+                chosen_job=chosen_job,
+                chosen_job_prob=data_dict[chosen_job],
+                )
 
 
 if __name__ == "__main__":
