@@ -1,61 +1,24 @@
-# Clyde 'Thluffy' Sinclair
+# The Best Laptop - Alif Abdullah, Kevin Cao, Jonathan Wu
 # SoftDev
-# Oct 2021 
+# K14 -- To be able to integrate forms and render responses on template files
+# 2021-10-14
 
-from flask import Flask             #facilitate flask webserving
-from flask import render_template   #facilitate jinja templating
-from flask import request           #facilitate form submission
+from flask import Flask, render_template, request 
+app = Flask(__name__)
 
-#the conventional way:
-#from flask import Flask, render_template, request
+@app.route("/")
+def login_form():
+    return render_template("login.html",tnpg="The Best Laptop: Alif Abdullah, Kevin Cao, Jonathan Wu")
 
-app = Flask(__name__)    #create Flask object
-
-
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. Can you predict which?
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests. Process results.
-PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
-'''
-
-@app.route("/") #, methods=['GET', 'POST'])
-def disp_loginpage():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    return render_template( 'login.html' )
-
-
-@app.route("/auth") # , methods=['GET', 'POST'])
-def authenticate():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
-
-
+@app.route("/auth")
+def response():
+    req_method = ""
+    if request.method == 'POST':
+        req_method = 'post'
+    elif request.method == 'GET':
+        req_method = 'get'
+    return render_template("response.html", tnpg="The Best Laptop: Alif Abdullah, Kevin Cao, Jonathan Wu",username=request.args['username'], greeting="We apologize for the inconvenience, your Exaltedness.",request_method=req_method)
     
-if __name__ == "__main__": #false if this file imported as module
-    #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+if __name__ == "__main__":
+    app.debug = True
     app.run()

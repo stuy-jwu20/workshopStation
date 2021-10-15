@@ -1,40 +1,31 @@
 <!DOCTYPE html>
-<!-- 
-  Clyde 'Thluffy' Sinclair
-  SoftDev
-  Oct 2021 
-
-     simple demo of HTML forms via Flask
-     
-     trioTASK:
-     If any member of team has forms experience, let their know-how osmote.
-     If no one does, seek external assistance.
-     PROTIP: Revisit code from intro if you have it.
-     Peruse this code together and discuss how it should work, in conjunction with the back end apparatus.
-    
- -->
-
-
+<!--
+# The Best Laptop - Alif Abdullah, Kevin Cao, Jonathan Wu
+# SoftDev
+# K14 -- To be able to integrate forms and render responses on template files
+# 2021-10-14
+-->
 <html>
+	<head>
+	  <title> Log In, Please! </title>
+	</head>
 
-  <head>
-    <title> LOGIN PAGE </title>
-  </head>
+	<body>
+		
+	  <h1> {{tnpg}}</h1>
+	  <h2>
+	    Automatic Identification Failed.
+	  </h2>
 
-  <body>
-    <h1>
-      Welcome, Travelers of the Intertoobz!
-    </h1>
+	  <h3>
+	    Please input your username to avoid instant termination.
+	  </h3>
 
+	  <form action="/auth">
+	    <input type="text" name="username">
+	    <input type="submit" name="sub1">
+	  </form>
+	  <br> 
 
-    <h3>
-      Enter your username below to proceed.
-    </h3>
-    <form action="/auth">
-      <input type="text" name="username">
-      <input type="submit" name="sub1">
-    </form>
-    <br>
-  </body>
-
+	</body>
 </html>
