@@ -20,7 +20,8 @@ def disp_loginpage():
     print(request.args)
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template('login.html')
+    landingText = "Enter your username below to proceed."
+    return render_template('login.html', message = landingText)
 
 
 @app.route("/auth")
@@ -36,22 +37,32 @@ def response():
     print(request.headers)
     user0 = 'kevinjonleafy'
     passw0 = 'dellthebestlaptop15'
-    error = ""
+    loadText = ""
     user = ""
     passw = ""
     if request.method == 'GET':
         user = request.args['username']
         passw = request.args['password']
-    else request.method == 'POST':
+    elif request.method == 'POST':
         user = request.form['username']
         passw = request.form['password']
     if user0 != user and passw0 != passw:
-        error = "uer and pass wrong"
-    try:
-        return render_template("response.html", username=user, password=passw)
-    except:
-        return render_template("login.html")
+        loadText = "Could not log in. User and password wrong."
+        return render_template("login.html", message = loadText)
+    elif user0 != user and passw0 == passw:
+        loadText = "Could not log in. User is wrong."
+        return render_template("login.html", message = loadText)
+    elif user0 == user and passw0 != passw:
+        loadText = "Could not log in. Password is wrong."
+        return render_template("login.html", message = loadText)
+    else:
+        loadText = "Click the button below to logout."
+        return render_template("response.html", username=user, password=passw, request_method = request.method, message = loadText)
 
+@app.route("/logout")
+def logoutSession():
+    landingText = "You've logged out. Enter your username below to proceed. "
+    return render_template("login.html", message = landingText)
 
 if __name__ == "__main__":
     app.debug = True

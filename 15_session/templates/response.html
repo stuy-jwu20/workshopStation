@@ -10,10 +10,18 @@
   <head>
     <title>User Identified</title>
   </head>
-
   <body>
     <h1>Welcome, user {{ username }}.</h1>
     <h2>We apologize for the inconvenience.</h2>
+    <h3> {{ message }} </h3>
+    <form action="/logout">
+      <input type="submit" name="logout" value="Logout"/>
+    </form>
     <p>Request Method Used: {{ request_method }}</p>
+    <h6> Built By: The Best Laptop </br>
+         Roster: </br>
+         Jonathan W. [Loki] </br>
+         Alif A. [The Eagle in the Sand] </br>
+         Kevin C. [Pipi] </br>
   </body>
 </html>
