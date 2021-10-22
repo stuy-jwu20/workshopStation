@@ -15,25 +15,28 @@ c = db.cursor()  # facilitate db ops -- you will use cursor to trigger db events
 # ==========================================================
 
 
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+# creates a table for the students.csv file with row 'name', 'age', 'id'
 c.execute('''CREATE TABLE IF NOT EXISTS roster (
-    name TEXT       NOT NULL, 
+    name TEXT       NOT NULL,
     age INTEGER     NOT NULL,
     userid INTEGER  NOT NULL
 )''')
 
+# reads the csv file and then inserts the csv values into the respective rows
 with open('students.csv', newline='') as f:
     reader = csv.DictReader(f)
     for row in reader:
         command = f"INSERT INTO roster VALUES (\"{row['name']}\", {row['age']}, {row['id']});"
         c.execute(command)
 
+# creates a table for the courses.csv file with row 'code', 'mark', 'id'
 c.execute('''CREATE TABLE IF NOT EXISTS courses (
-    code TEXT       NOT NULL, 
+    code TEXT       NOT NULL,
     mark INTEGER    NOT NULL,
     juniors INTEGER NOT NULL
-)''')
+y)''')
 
+# reads the csv file and then inserts the csv values into the respective rows
 with open('courses.csv', newline='') as f:
     reader = csv.DictReader(f)
     for row in reader:
