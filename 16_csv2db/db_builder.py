@@ -37,7 +37,7 @@ c.execute('''CREATE TABLE IF NOT EXISTS courses (
     code TEXT       NOT NULL,
     mark INTEGER    NOT NULL,
     juniors INTEGER NOT NULL
-y)''')
+)''')
 
 # reads the csv file and then inserts the csv values into the respective rows
 with open('courses.csv', newline='') as f:
