@@ -27,6 +27,7 @@ with open('students.csv', newline='') as f:
     reader = csv.DictReader(f)
     for row in reader:
         command = f"INSERT INTO roster VALUES (\"{row['name']}\", {row['age']}, {row['id']});"
+# this try except block is to ensure that the user doesn't append the data multiple times to the database
         try:
             c.execute(command)
         except:
