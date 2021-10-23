@@ -2,3 +2,7 @@ Team The Best Laptop - Jonathan Wu [Loki] , Alif Abdullah [The Eagle in the Sand
 SoftDev
 K16 - All About Database
 2021-10-20
+
+The commands "select * from <table_name>" will give us all the queries of the table from <table_name>. However, research conducted using the following webpage (https://www.tutorialspoint.com/sqlite/sqlite_where_clause.htm) has informed that, using the key-word WHERE allows us to select certain rows, whose value for a certain column follows some condition.
+
+For example, given an SQLite table stores with the INTEGER column 
