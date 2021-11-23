@@ -1,0 +1,17 @@
+Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)
+SoftDev pd0
+K18 -- CSS basics
+2021-11-23t
+time spent: 1.5 hours
+
+Bacon ipsum generator: https://baconipsum.com/?paras=2&type=all-meat&start-with-lorem=1
+
+Notables:
+
+Our group had a rough start using inline CSS to start off with to format the website. Our main issue was first trying to figure out what was/wasn't allowed in terms of what was considered inlines and what wasn't. 
+
+However, once we figured out how to format it using inline, the internal and external formatting came by like a breeze. The other two were done rather quickly, which minor changes to adjust for the different styles of formatting with the CSS. 
+
+To keep consistency with the bacon ipsum shown on the example, we also chose a bacon ipsum generator to go along with our website.
+
+We also learned that formatting some of the CSS in a certain way (e.g. flex or float) would "break" the website in that it would format in a way that we didn't expect it to which made things slightly harder. 
