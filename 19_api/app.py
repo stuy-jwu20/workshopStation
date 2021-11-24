@@ -2,7 +2,7 @@
 # SoftDev pd0
 # K19: A RESTful Journey Skyward
 # 2021-11-24t
-# time spent:  hours
+# time spent: 1 hour
 
 from flask import Flask, render_template
 import json
@@ -38,7 +38,9 @@ def api():
     data = urllib.request.urlopen(url)
     read_data = data.read()
     d_data = read_data.decode('utf-8')
-    p_data = json.loads(d_data)
+    p_data = json.loads(d_data) # dictionary of all the API information
+    # print(p_data['url'])
+    # print(p_data['explanation'])
     return render_template("main.html", pic = p_data['url'], comment = p_data['explanation'])
 
 if __name__ == "__main__":  # true if this file NOT imported
