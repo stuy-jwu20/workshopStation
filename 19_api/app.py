@@ -15,7 +15,7 @@ app = Flask(__name__) #create instance of class Flask
 def api():
     '''
         For those who get the ssl error involving certifcates being invalid,
-        this is atemporary solution that will bypass it until you resolve it on
+        this is a temporary solution that will bypass it until you resolve it on
         your machine.
     '''
     # ssl._create_default_https_context = ssl._create_unverified_context
