@@ -1,0 +1,10 @@
+Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)
+SoftDev pd0
+K19: A RESTful Journey Skyward
+2021-11-24t
+time spent:  hours
+
+.loads() turns a JSON object string into a dictionary. This is useful for accessing content 
+from APIs and inserting them into HTML templates. 
+
+When retrieving the raw JSON data from the API, there is a b'' in front of the dictionary. This signals that it is a byte data and that in order for it to be usable, it has to be decoded via utf-8 within python.
