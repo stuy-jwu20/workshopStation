@@ -1,0 +1,9 @@
+Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)
+SoftDev pd2
+K22: Who Does Frame Work For?
+2021-11-29t
+time spent: 1 hour 
+
+The dropdown menu of the navbar requires the use of JavaScript. The background color of 
+the navbar can be set with a style tag or with bg-* (* can be replaced with dark, light,
+or primary). 
