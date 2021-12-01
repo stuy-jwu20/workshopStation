@@ -2,8 +2,14 @@ Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)
 SoftDev pd2
 K22: Who Does Frame Work For?
 2021-11-29t
-time spent: 1 hour 
+time spent: 1.5 hours
 
 The dropdown menu of the navbar requires the use of JavaScript. The background color of 
 the navbar can be set with a style tag or with bg-* (* can be replaced with dark, light,
-or primary). 
+or primary). This is also used to set the color for other elements, like stack borders. 
+There is a class "row" that allows different elements of the page to be displayed next 
+to each other. Column sizes can be set using col-*-* (first * can be replaced by sm, md, 
+lg, or xl; second * can be replaced by a number). "p" is used to set padding size and "m" 
+is for margin size. Different letters added on to that indicate the different sides (t, b, 
+l, r, x, y). To indicate the size, a number (in the range 0-5) is attached with a dash. 
+"auto" can also be used in place of that number (but only for margin).
