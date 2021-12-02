@@ -1,0 +1,37 @@
+Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)
+SoftDev pd2
+K23: No. 2?
+2021-12-1t
+time spent: 1 hour
+
+DISCO:
+
+We discovered that the callouts in Foundation could be formatted differently, so there
+are various ways to input text onto the website as well.
+
+We also then learned that Foundation, like BootStrap, also has 'warning' and 'alert'
+descriptors for their div ids and classes.
+
+The navbar creation in Foundation appeared to be easier than BootStrap. In addition to that
+the various ways to create buttons were pretty interesting.
+
+Q/C/C:
+
+Questions - What other features are useful and interesting in Foundation?
+
+Comments - Overall, the tutorial was pretty organized and easy to follow. 
+
+Concerns - One main concern we had was that some of the features listed were either
+unclear or written incorrectly. For example, the default colors were listed
+on their on-ramp, but it was not specified how it could be done. The next thing
+was that their expanded button description was wrong. Type was supposed to be set to 
+"button" not "expanded button" like what was displayed in the tutorial. The class was
+supposed to be set to "expanded button". 
+
+Q0:
+We consulted their HTML file because parts of their tutorial were incomplete or incorrect.
+Other than that, we did not consult any other resources.
+
+Q1:
+We like Foundation better at this point because it seems easier to read and understand.
+It also seems simpler.
