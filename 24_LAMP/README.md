@@ -39,7 +39,7 @@ SSH back into your user account
     ssh <my_username>@<your_server_ip>
     ```
 
-4.  
+4.  Step Four
     ```
     sudo service ssh restart
     sudo apt update
