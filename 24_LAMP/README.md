@@ -16,7 +16,7 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 
 ### Instructions to Install  
 
-1.  
+1.  Step One  
     ```
     ssh root@<your_server_ip>
     adduser <your_username>
@@ -25,17 +25,15 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
     ufw enable
     rsync --archive --chown=<your_username>:<your_username> ~/.ssh /home/<your_username>
     ```
-2.  
-Try logging into your user account
+2.  Try logging into your user account  
 
     ```
     ssh <my_username>@<your_server_ip>
     ```
 
-3.  
-If that's successful, exit both the root and your connection so that you're back into your CS Lab machine terminal.
+3.  If that's successful, exit both the root and your connection so that you're back into your CS Lab machine terminal.  
 
-SSH back into your user account
+SSH back into your user account  
 
     ```
     ssh <my_username>@<your_server_ip>
@@ -107,7 +105,7 @@ Accurate as of (last update): 2022-01-17
 
 #### Contributors:  
 Jonathan Wu, pd2  
-Thomas Yu, pd2
+Thomas Yu, pd2  
 Mark Zhu, pd2
 
 _Note: the two spaces after each name are important! ( <--burn after reading)  _
