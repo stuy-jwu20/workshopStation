@@ -36,11 +36,11 @@ Flask is not built to serve -- on its own -- persistent or high-traffic sites. A
   sudo chmod -R 777 FirstApp
   ```
 Make your directory look something like this:
-FirstApp
-├── FirstApp
-	├── __init__.py
-	├── static
-	└── templates
+FirstApp  
+├── FirstApp  
+	├── __init__.py  
+	├── static  
+	└── templates  
 * Then  
   ```
   sudo apt-get install python3-pip
