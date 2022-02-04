@@ -1,0 +1,25 @@
+Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
+SoftDev pd2
+K27 -- Basic functions in JavaScript
+2022-02-04r
+time spent: 45 minutes
+
+DISCO
+-----------------------------------------------------------------
+* Braces are used to surround the bodies of functions, just like in Java.
+* These are the ways to define functions in JS:
+    var fxnName = function(args) {
+        body;
+    }
+
+    var fxnName = (args) => {
+        body;
+    }
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* Why is var used to define a function? 
+* Can "function" just be used to define a function?
+=================================================================
+
