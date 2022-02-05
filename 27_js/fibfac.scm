@@ -1,3 +1,9 @@
+; Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
+; SoftDev pd2
+; K27 -- Basic functions in JavaScript
+; 2022-02-04r
+; time spent: 45 minutes
+
 (define fact
   (lambda (n)
     (if (= n 0)
