@@ -5,3 +5,6 @@ K28 -- Manipulating the DOM
 time spent: 45 minutes
 --------------------------------------------------
 
+- The calling of red() and stripe() do not overwrite each other. The only way for these to "work" properly is by having uncolored text.
+- addItem defaults to appending to the end of the list, while you can specify where to remove an item from a list with removeItem.
+- If you have multiple color variables for a text, the last variable becomes the color that it takes on.

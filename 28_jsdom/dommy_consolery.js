@@ -91,8 +91,6 @@ var stripe = function() {
   }
 };
 
-//insert your implementations here for...
-
 // FIB
 var fib = function(n) {
   if (n <= 1) {
@@ -114,20 +112,24 @@ var fact = function(n) {
 };
 
 // GCD
-var gcf = function(a, b, i) {
-  if (a % i == 0, b % i == 0) {
-    return i;
-  }
-  else {
-    return gcf(a, b, i - 1);
-  }
-};
-
 var gcd = function(a, b) {
   if (a <= b) {
     return gcf(b, a, a);
   }
   else {
     return gcf(a, b, b);
+  }
+};
+
+//gcd helper function
+var gcf = function(a, b, i) {
+  if (i == 1) {
+    return 1;
+  }
+  if (a % i == 0 && b % i == 0) {
+    return i;
+  }
+  else {
+    return gcf(a, b, (i - 1));
   }
 };
