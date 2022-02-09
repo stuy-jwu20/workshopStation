@@ -74,6 +74,20 @@ var stripe = function() {
   }
 };
 
+//our own simple function based on our understanding of the previous ones
+//given that the text within the div tags is uncolored, it changes the color of the text to a specified color 
+//specified color is in the form of a string
+var colors = function(color) {
+  var items = document.getElementsByTagName("div");
+  for(var i = 0; i < items.length; i++) {
+    if (color == 'red' || color == 'green' || color == 'blue') {
+      items[i].classList.add(color);
+    } else {
+      break;
+    }
+  }
+};
+
 // FIB
 var fib = function(n) {
   if (n <= 1) {
