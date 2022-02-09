@@ -1,23 +1,3 @@
-/*
-   your PPTASK:
-
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-
-    		Write with your future self or teammates in mind.
-
-    		If you find yourself falling out of flow mode, consult
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-
-   (delete this block comment once you are done)
-*/
-
 // Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
 // SoftDev pd2
 // K28 -- Getting more comfortable with the dev console and the DOM
@@ -55,6 +35,7 @@ var o = { 'name' : 'Thluffy',
 
 
 //adds a new list item in real time
+//appends to the end of the list
 var addItem = function(text) {
   var list = document.getElementById("thelist");
   var newitem = document.createElement("li");
@@ -63,7 +44,8 @@ var addItem = function(text) {
 };
 
 
-//removes a list item in real time, unlike the addItem, this takes an integer
+//removes the nth list item (starting from 0, unlike the list numbering which starts at 1) in real time 
+//unlike the addItem, this takes an integer which represents location
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
   listitems[n].remove();
@@ -78,8 +60,9 @@ var red = function() {
   }
 };
 
-//given a list of text that are already not in stripes, this will
+//given a list of text that are already not in stripes (and are uncolored), this will
 //change the text color in alternating fashion by calling stripe()
+//every even list item is red and every odd list item is blue
 var stripe = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -133,3 +116,9 @@ var gcf = function(a, b, i) {
     return gcf(a, b, (i - 1));
   }
 };
+
+//allows one call to each of our calculator functions to appear 
+//on the page upon loading index.html
+addItem("fib(5) = " + fib(5))
+addItem("fact(5) = " + fact(5))
+addItem("gcd(15, 39) = " + gcd(15, 39))

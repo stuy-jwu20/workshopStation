@@ -8,3 +8,8 @@ time spent: 45 minutes
 - The calling of red() and stripe() do not overwrite each other. The only way for these to "work" properly is by having uncolored text.
 - addItem defaults to appending to the end of the list, while you can specify where to remove an item from a list with removeItem.
 - If you have multiple color variables for a text, the last variable becomes the color that it takes on.
+- Functions can be called directly in the JS file and since the HTML file reads this, the changes will be reflected immediately upon loading the HTML file.
+- Do not declare a type when creating a new variable using var.
+- Remember to use semicolons! Not using semicolons properly may result in errors.
+- One can get elements from an HTML file by id or by tag name. The function document.getElementById only returns one while getElementsByTagName returns a list of multiple. They can use appendChild to append an item to that element.
+- One can create an element in an HTML file using createElement, which takes a tag name. Adding the text to that element can be done with innerHTML.
