@@ -1,0 +1,9 @@
+Team Random Word Generator :: Yuqing Wu, Jonathan Wu
+SoftDev pd2
+K29 -- DOMfoolery++
+2022-02-10
+
+The Math.random() function in Java generates a number from 0 to 1, so you have to
+use Math.floor after multiplying by at least 10 so you can get an integer for the numbers to work.
+
+When using .addEventListener, the <value> part of it must be called first via a function(){<fxn>} in order to trigger the action upon getting the event to happen.
