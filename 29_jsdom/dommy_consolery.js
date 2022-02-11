@@ -104,35 +104,29 @@ var gcd = function(a,b){
   return dividend;
 };
 
-
-//wrapper function for fibonacci
 var fib_wrap = function(){
   var a = Math.floor(Math.random() * 10);
   return "fib(" + a + "): "+fib(a);
 };
 
-//wrapper function for factorial
+
 var fact_wrap = function(){
   var a = Math.floor(Math.random() * 10);
   return "fact(" + a + "): "+fact(a);
 };
 
-
-//wrapper function for gcd
 var gcd_wrap = function(){
   var a = Math.floor(Math.random() * 100);
   var b = Math.floor(Math.random() * 100);
+  //return "gcd(" + a + ", " +b "): " + gcd(a,b);
   return "gcd(" + a + ", " + b + ") " +gcd(a,b);
 }
 
-//button for fibonacci
 var fibB = document.getElementById("fib");
 fibB.addEventListener("click", function(){addItem(fib_wrap());});
 
-//button for factorial
 var factB = document.getElementById("fact");
 factB.addEventListener("click", function(){addItem(fact_wrap())});
 
-//button for gcd
 var gcdB = document.getElementById("gcd");
 gcdB.addEventListener("click", function(){addItem(gcd_wrap())});
