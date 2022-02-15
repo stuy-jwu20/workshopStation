@@ -1,0 +1,10 @@
+Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
+SoftDev pd2
+K30 -- canvas based JS drawing
+2022-02-14m
+time spent: 45 minutes
+
+Helpful documentation: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
+
+Additional notes from working on this assignment:
+- Always use ctx.beginPath() before drawing a shape
