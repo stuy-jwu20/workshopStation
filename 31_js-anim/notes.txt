@@ -16,3 +16,10 @@ Notes
     };
 
     It also works when updating requestID before drawing the dot, but it does make more sense to do that after drawing the dot.
+
+The two new functions:
+window.requestAnimationFrame(<callback>)
+    - This tells the browser that you want to perform an animation. It takes a callback, which is essentially a specified function that updates the animation each time it's called.
+    
+window.cancelAnimationFrame(requestID)
+    - This cancels an animation frame request.
