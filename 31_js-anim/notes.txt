@@ -2,5 +2,17 @@ Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
 SoftDev pd2
 K31 -- canvas based JS animation
 2022-02-15t
+time spent: 45 minutes
 
 Notes
+- If you increase the radius by a decimal value, make sure to check if the radius is greater than or equal to 250, rather than checking only if it's equal. 
+- From the QAF, this simple format for drawDot was posted:
+    var drawDot = function() {
+        window.cancelAnimationFrame( AREQUESTID...WHEREDOUGETIT? );
+
+        //draw the dot
+
+        requestID = window.requestAnimationFrame( WHUTGOHURR );
+    };
+
+    It also works when updating requestID before drawing the dot, but it does make more sense to do that after drawing the dot.
