@@ -1,8 +1,28 @@
-Team Keyboard:: Jonathan Wu, Angela Zhang
-SoftDev pd2
-K32 -- more canvas based JS animation
-2022-02-17t
-time spent: 60 minutes
+// Team Keyboard:: Jonathan Wu, Angela Zhang
+// SoftDev pd2
+// K32 -- more canvas based JS animation
+// 2022-02-17
+// time spent: 120 minutes
 
-- You can create a function with the addEventListener in of itself to call more functions for more complicated conditionals and interactions in JS.
-- ctx.drawImage has two functions, one with x,y variables and one with four variables. The one with two variables uses the default size of the image while the one with four variables considers the scaling of the image as well.
+
+need two requestIDs because one for each animation
+
+code for images:
+  var img = new Image();
+  img.src = 'img.jpg';
+  ctx.drawImage(img, x, y, w, h);
+
+remember that you need to factor in the size of the image too !!
+REMEMBER TO ACTUALLY INITIALIZE THE BUTTON
+
+    var dvdButton = document.getElementById("dvdScreensaver"); // GET DVD BUTTON
+
+AND TO ALLOW IT TO CLICK
+
+    dvdButton.addEventListener("click", () => {
+      defaultDirection();
+      DVDx = Math.floor(Math.random() * (c.clientWidth-DVDw))
+      DVDy = Math.floor(Math.random() * (c.clientHeight-DVDh))
+      drawDVD();
+    });
+

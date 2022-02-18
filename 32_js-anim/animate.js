@@ -2,7 +2,7 @@
 // SoftDev pd2
 // K32 -- more canvas based JS animation
 // 2022-02-17t
-// time spent: 60 minutes
+// time spent: xx minutes
 
 // model for HTML5 canvas-based animation
 
@@ -30,8 +30,10 @@ var clear = (e) => {
   ctx.clearRect(0, 0, c.clientWidth, c.clientHeight); //clears canvas
 };
 
+
 var radius = 0;
 var growing = true;
+
 
 //var drawDot = function() {
 var drawDot = () => {
@@ -88,6 +90,7 @@ var DVDy;
 //dvd variables to set the default direction it translates
 var vertDefaultDown;
 var horzDefaultLeft;
+
 var defaultDirection = () => {
   var rngV = Math.floor(Math.random() * 100);
   var rngH = Math.floor(Math.random() * 100);
@@ -104,16 +107,19 @@ var defaultDirection = () => {
   console.log(rngH)
 }
 
+
 //var drawDVD = function() {
 var drawDVD = () => {
-  console.log("drawDVD invoked...")
+  console.log("drawDVD invoked...");
   clear();
   window.cancelAnimationFrame(dvdrequestID);
+
   // creates the image on the canvas
   var img = new Image();
   img.src = 'logo_dvd.jpg';
   ctx.drawImage(img, DVDx, DVDy, DVDw, DVDh);
   // helps determine the variable as to which direction it bounces
+
   if (DVDx + DVDw >= 500) {
     bRight = true;
     bLeft = false;
@@ -127,6 +133,8 @@ var drawDVD = () => {
     bDown = true;
     bUp = false;
   }
+
+
   // movement of the image based on the variable (left/right)
   if (bRight) {
     DVDx--;
@@ -139,6 +147,8 @@ var drawDVD = () => {
       DVDx--;
     }
   }
+
+
   // movement of the image based on the variable (up/down)
   if (bUp) {
     DVDy--;
@@ -153,6 +163,7 @@ var drawDVD = () => {
   }
   dvdrequestID = window.requestAnimationFrame(drawDVD);
 }
+
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click", stopIt );
