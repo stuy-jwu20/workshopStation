@@ -2,7 +2,7 @@
 // SoftDev pd2
 // K32 -- more canvas based JS animation
 // 2022-02-17t
-// time spent: xx minutes
+// time spent: 60 minutes
 
 // model for HTML5 canvas-based animation
 
@@ -30,10 +30,8 @@ var clear = (e) => {
   ctx.clearRect(0, 0, c.clientWidth, c.clientHeight); //clears canvas
 };
 
-
 var radius = 0;
 var growing = true;
-
 
 //var drawDot = function() {
 var drawDot = () => {
@@ -77,31 +75,90 @@ var stopIt = () => {
 var DVDh = 100;
 var DVDw = 150;
 
-var DVDx = Math.floor(Math.random() * (c.clientHeight-DVDw))
-var DVDy = Math.floor(Math.random() * (c.clientHeight-DVDh))
+//dvd variables to default for bouncing
+var bLeft = false;
+var bRight = false;
+var bUp = false;
+var bDown = false;
 
+//dvd variables to set the spawn point of the DVD jpg
+var DVDx;
+var DVDy;
 
-var drawDVD = () => {
-
-  console.log("drawDVD invoked...")
-  clear();
-  
-  var img = new Image();
-  img.src = 'logo_dvd.jpg';
-  ctx.drawImage(img, DVDx, DVDy, DVDw, DVDh);;
-  
-  window.cancelAnimationFrame(dvdrequestID);  
-  dvdrequestID = window.requestAnimationFrame(drawDVD);
-
+//dvd variables to set the default direction it translates
+var vertDefaultDown;
+var horzDefaultLeft;
+var defaultDirection = () => {
+  var rngV = Math.floor(Math.random() * 100);
+  var rngH = Math.floor(Math.random() * 100);
+  if (rngV >= 50) {
+    vertDefaultDown = true;
+  } else {
+    vertDefaultDown = false;
+  }
+  if (rngH >= 50) {
+    horzDefaultLeft = true;
+  } else {
+    horzDefaultLeft = false;
+  }
+  console.log(rngH)
 }
 
-// var img = new Image();
-// img.addEventListener('load', function() {
-//   drawImage(logo_dvd.jpg, 100, 100)
-// }, false);
-// img src = 'logo_dvd.jpg'
-
+//var drawDVD = function() {
+var drawDVD = () => {
+  console.log("drawDVD invoked...")
+  clear();
+  window.cancelAnimationFrame(dvdrequestID);
+  // creates the image on the canvas
+  var img = new Image();
+  img.src = 'logo_dvd.jpg';
+  ctx.drawImage(img, DVDx, DVDy, DVDw, DVDh);
+  // helps determine the variable as to which direction it bounces
+  if (DVDx + DVDw >= 500) {
+    bRight = true;
+    bLeft = false;
+  } else if (DVDx <= 0) {
+    bLeft = true;
+    bRight = false;
+  } else if (DVDy + DVDh >= 500) {
+    bUp = true;
+    bDown = false;
+  } else if (DVDy <= 0) {
+    bDown = true;
+    bUp = false;
+  }
+  // movement of the image based on the variable (left/right)
+  if (bRight) {
+    DVDx--;
+  } else if (bLeft) {
+    DVDx++;
+  } else {
+    if (horzDefaultLeft) {
+      DVDx++;
+    } else {
+      DVDx--;
+    }
+  }
+  // movement of the image based on the variable (up/down)
+  if (bUp) {
+    DVDy--;
+  } else if (bDown) {
+    DVDy++;
+  } else {
+    if (vertDefaultDown) {
+      DVDy++;
+    } else {
+      DVDy--;
+    }
+  }
+  dvdrequestID = window.requestAnimationFrame(drawDVD);
+}
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click", stopIt );
-dvdScreensaver.addEventListener("click", drawDVD );
+dvdButton.addEventListener("click", () => {
+  defaultDirection();
+  DVDx = Math.floor(Math.random() * (c.clientWidth-DVDw))
+  DVDy = Math.floor(Math.random() * (c.clientHeight-DVDh))
+  drawDVD();
+});
