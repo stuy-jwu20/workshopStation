@@ -12,6 +12,7 @@
 var c = document.getElementById("playground"); // GET CANVAS
 var dotButton = document.getElementById("buttonCircle"); // GET DOT BUTTON
 var stopButton = document.getElementById("buttonStop"); // GET STOP BUTTON
+var dvdButton = document.getElementById("dvdScreensaver"); // GET DVD BUTTON
 
 //prepare to interact with canvas in 2D
 var ctx = c.getContext("2d");
@@ -20,6 +21,7 @@ var ctx = c.getContext("2d");
 ctx.fillStyle = 'purple';
 
 var requestID;  //init global var for use with animation frames
+var dvdrequestID; //for dvd animation frames
 
 
 //var clear = function(e) {
@@ -65,9 +67,41 @@ var drawDot = () => {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
+  console.log( dvdrequestID );
   window.cancelAnimationFrame(requestID);
+  window.cancelAnimationFrame(dvdrequestID);
 };
 
 
+//dvd variables h and w are for the picture
+var DVDh = 100;
+var DVDw = 150;
+
+var DVDx = Math.floor(Math.random() * (c.clientHeight-DVDw))
+var DVDy = Math.floor(Math.random() * (c.clientHeight-DVDh))
+
+
+var drawDVD = () => {
+
+  console.log("drawDVD invoked...")
+  clear();
+  
+  var img = new Image();
+  img.src = 'logo_dvd.jpg';
+  ctx.drawImage(img, DVDx, DVDy, DVDw, DVDh);;
+  
+  window.cancelAnimationFrame(dvdrequestID);  
+  dvdrequestID = window.requestAnimationFrame(drawDVD);
+
+}
+
+// var img = new Image();
+// img.addEventListener('load', function() {
+//   drawImage(logo_dvd.jpg, 100, 100)
+// }, false);
+// img src = 'logo_dvd.jpg'
+
+
 dotButton.addEventListener( "click", drawDot );
-stopButton.addEventListener( "click",  stopIt );
+stopButton.addEventListener( "click", stopIt );
+dvdScreensaver.addEventListener("click", drawDVD );
