@@ -1,0 +1,12 @@
+Team SoloQueue :: Jonathan Wu
+SoftDev pd2
+K34 -- Another DB Perspective
+2022-04-27t
+time spent: 35 minutes
+
+notables:
+- One to many: array in parent seems very useful..
+- I also like that you can do a scalar in child
+- It's funny why it's called a bucket pattern when it's just nested data.
+- Precomputing is a great idea!
+Reminder: Evaluate your workload at the beginning!
