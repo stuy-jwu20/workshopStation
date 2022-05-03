@@ -1,0 +1,9 @@
+Team SoloQueue :: Jonathan Wu
+SoftDev pd2
+K35 -- Another DB Perspective
+2022-05-02t
+time spent: 45 minutes
+
+notables:
+- The atlas GUI seems to clustered! (Seriously though, it's so different than the tutorial on the course I was a bit confused).
+- For now, everything seems managable.
