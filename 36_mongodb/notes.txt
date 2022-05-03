@@ -1,0 +1,9 @@
+Team SoloQueue :: Jonathan Wu
+SoftDev pd2
+K36 -- Another DB Perspective
+2022-05-02t
+time spent: 35 minutes
+
+notables:
+- It's so odd that i have to mongoimport to export it to the Atlas. That's confusing.
+- I think I like using the GUI more than the console, but it's probably easier to query stuff using the console.
