@@ -1,0 +1,8 @@
+Team SoloQueue :: Jonathan Wu
+SoftDev pd2
+K37 -- Another DB Perspective
+2022-05-08t
+time spent: 60 minutes
+
+notables:
+- All these syntaxes and operators are getting so confusing...
