@@ -1,0 +1,9 @@
+Team SoloQueue :: Jonathan Wu
+SoftDev pd2
+K39 -- Another DB Perspective
+2022-05-11th
+time spent: 75 minutes
+
+notables:
+- The sort and limit functionity being able to be put in either order is pretty convenient for lazy people who don't want to remember the order. They're also really handy!
+- Aggregation is pretty damn useful...

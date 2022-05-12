@@ -1,0 +1,8 @@
+Team SoloQueue :: Jonathan Wu
+SoftDev pd2
+K40 -- Another DB Perspective
+2022-05-11th
+time spent: 30 minutes
+
+notables:
+- The MongoDB Compass just seems like a glorified version of the Atlas Cluster that you can use online.
